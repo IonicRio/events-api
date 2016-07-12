@@ -19,6 +19,7 @@ app('Dingo\Api\Transformer\Factory')->register('Event', 'EventTransformer');
 
 $api->version('v1', function ($api) {
     $api->resource('/events', 'App\Api\V1\Controllers\EventsController');
+    $api->resource('/speakers', 'App\Api\V1\Controllers\SpeakersController');
     $api->resource('/events/{event}/speakers', 'App\Api\V1\Controllers\SpeakersController');
     $api->resource('/events/{event}/talks', 'App\Api\V1\Controllers\TalksController');
 });

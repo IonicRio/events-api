@@ -12,10 +12,11 @@ class EventsController extends Controller
 
     public $model;
     public $transformerClass;
+
     /**
      * Create a new controller instance.
      *
-     * @return void
+     * @param Event $model
      */
     public function __construct(Event $model)
     {

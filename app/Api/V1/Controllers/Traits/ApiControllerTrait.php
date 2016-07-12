@@ -15,7 +15,7 @@ trait ApiControllerTrait
 
     public function index(Request $request)
     {
-        return $this->response->paginator($this->model->paginate(15), new $this->transformerClass);
+        return response()->json($this->model->paginate(15));
     }
 
     public function show (Request $request, $id)
